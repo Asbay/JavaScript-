@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="txtSayi1" placeholder="1. Sayı">
+    <input type="number" id="txtSayi2" placeholder="2. Sayı">
+    <button id="btn">TOPLA</button>
+    <div id="sonuc"></div>
+    
+    <script>
+        var btnTopla=document.getElementById("btn");
+        
+        btnTopla.onclick=function(){
+            var s1=Number(document.getElementById("txtSayi1").value);
+            var s2=Number(document.getElementById("txtSayi2").value);
+            var toplam=s1+s2;
+            document.getElementById("sonuc").innerHTML=s1+"+"+s2+"="+toplam;
+        }
+    </script>
+</body>
+</html>

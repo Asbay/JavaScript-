@@ -1,0 +1,30 @@
+<h1>Javascript İki Sayıyı Toplama </h1>
+    
+   
+    <input type="number" id="sayi1">
+   
+    <input type="number" id="sayi2">
+
+    <button id="buton">Topla</button>
+
+    <div id="toplam"></div>
+    
+    <script>
+        function hesapla(){
+            var toplam=0;
+            var sayi1=document.getElementById("sayi1").value;
+            var sayi2=document.getElementById("sayi2").value;
+              
+            var s1 = Number(sayi1);
+            var s2 = Number(sayi2);
+            toplam= s1+s2;
+            
+
+
+            document.getElementById("toplam").innerHTML = "Toplam : " + toplam;
+        }
+
+        var hesaplaBtn=document.getElementById("buton");
+        hesaplaBtn.onclick=hesapla;
+
+    </script>
