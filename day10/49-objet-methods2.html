@@ -8,24 +8,28 @@
 </head>
 <body>
     
-    <script>
+    <script>//objenin icinde birden fazla ayni key varsa bize en sondaki verilir
         const car1 = {
             brand: "Audi",
             model: "A4",
             color: "red",
             model: "A6"
-        }
+        }//yeni bir car2 olusturduk
         console.log(car1);
         const car2 = {
             brand: "Mercedes",
             year:2023
-        }
+        }//burda car1 ve car 2 birlestiriyoruzbirlesip 1. yazana atamis oluyo
+        //ar2 eski halinde kaliyo ar 1 güncelleniyo
         Object.assign(car1, car2);
         console.log(car1);
         console.log(car1 === car2);
         //Bir nesneden tamamen bağımsız yeni bir nesne oluşturmak için
         // yani kopya oluşturmak için (shallow copy) Object.assign kullanılır
-        const car3 = Object.assign({}, car1);
+        const car3 = Object.assign({}, car1);//1.objede birlestigi icin birinciyi bos küme seklinde aliyorum
+        //konsolda prototype da bisey gozukmuyor yani bagimsiz oldugu burdan da anlasilir
+        //bu sekilde daha fAZLA DA birlestirme yapilabilir
+        //const car3 = Object.assign({}, car1,car2);
         console.log(car3);
         
     </script>
