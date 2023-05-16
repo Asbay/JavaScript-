@@ -1,4 +1,4 @@
-import { students } from "../data/students.js";
+import { students } from "../data/student.js";
 
 document.getElementById("btnShowLowScores").addEventListener("click", ()=>{
     setColorForLowScores();
@@ -9,7 +9,7 @@ const setColorForLowScores = () => {
     const trEls = document.querySelectorAll("#tblStudents tbody tr");
     
     trEls.forEach( (tr)=>{
-        const score = tr.querySelector("td:last-child").innerText;
+        const score = tr.querySelector("td:last-child").innerHTML;
         if(score<50){
             tr.classList.add("table-danger");
         }
