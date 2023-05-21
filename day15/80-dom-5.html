@@ -35,8 +35,8 @@
         const btnDelete = document.getElementById("btnDelete");
 
         btnAdd.addEventListener("click", ()=>{
-            const newLi = document.createElement("li");
-            newLi.innerHTML = txtCity.value;
+            const newLi = document.createElement("li");//yeni bir li elementi olusturuyor
+            newLi.innerHTML = txtCity.value; //textbox in icine yazdigim sey value inner html e yazdik
             newLi.classList.add("list-group-item");
             newLi.addEventListener("click", (e)=>{
                 e.target.classList.toggle("bg-danger");
@@ -46,10 +46,10 @@
             txtCity.focus();
         })
 
-        btnDelete.addEventListener("click", ()=>{
+        btnDelete.addEventListener("click", ()=>{//toggle ile sectiklerimizi delete ile silmek icin bu kismi yazdik
             const deletedItems = lstCities.querySelectorAll(".bg-danger");
             const result = confirm(`${deletedItems.length} items are deleting. Are you sure?`);
-
+//burda kullaniciya soruyoruz 2 taneyi silmek istiyorsunuz emin misiniz
             if(!result) return;
 
             deletedItems.forEach((item)=>{
