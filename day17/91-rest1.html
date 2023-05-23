@@ -17,7 +17,8 @@
 
         console.log(sum1(5,7));
 
-
+//reduce() metodu, dizinin her değeri için bir işlev yürütür ve sonunda 
+//diziyi tek bir değere düşürür. Metodun dönüş değeri ilk parametresi olan accumulator parametresinde saklanır
         const sum2 = (...nums) => {
             const total = nums.reduce( (t,x) => t + x, 0 );
             return total;
